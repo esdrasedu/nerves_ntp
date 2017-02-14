@@ -61,7 +61,7 @@ defmodule Nerves.Ntp.Worker do
   end
 
   defp ntp_cmd do
-    "#{@ntpd} -n -d"
+    "#{@ntpd} -q -d"
     |> add_servers
   end
 
