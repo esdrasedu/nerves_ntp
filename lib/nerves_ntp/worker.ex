@@ -79,7 +79,7 @@ defmodule Nerves.Ntp.Worker do
     parse_ntp_reply captures
   end
 
-  def parse_ntp_output(_data) do
+  def parse_ntp_output(data) do
     Logger.debug data
     :ok
   end
