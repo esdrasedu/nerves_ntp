@@ -33,7 +33,7 @@ defmodule Nerves.Ntp.Worker do
   end
 
   def handle_info({_, {:data, {:eol, data}}}, port) do
-    # Logger.debug "Received data from port #{data}"
+    Logger.debug "Received data from port #{data}"
     case parse_ntp_output data do
       :ok -> 
         {:noreply, port}
@@ -80,7 +80,7 @@ defmodule Nerves.Ntp.Worker do
   end
 
   def parse_ntp_output(_data) do
-    # Logger.debug data
+    Logger.debug data
     :ok
   end
 
